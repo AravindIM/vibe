@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Vibe</title>
+    <link rel="stylesheet" href="https://unpkg.com/@knadh/oat/oat.min.css" />
+    <script src="https://unpkg.com/@knadh/oat/oat.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"></script>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      nav {
+        flex: 0 0 auto;
+      }
+
+      textarea {
+        flex: 1;
+        width: 100%;
+
+        border: none;
+        outline: none;
+        resize: none;
+
+        background: transparent;
+        box-shadow: none;
+
+        padding: 12px;
+        box-sizing: border-box;
+
+        font-family: monospace;
+        font-size: 14px;
+        line-height: 1.5;
+
+        resize: none;
+      }
+
+      textarea:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    </style>
+  </head>
+</html>
+<body>
+  <nav>
+    <ot-dropdown>
+      <button popovertarget="demo-menu" class="ghost">
+        File
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="m6 9 6 6 6-6" />
+        </svg>
+      </button>
+      <menu popover id="demo-menu">
+        <button role="menuitem">Open</button>
+        <button role="menuitem">Open folder</button>
+        <hr />
+        <button role="menuitem">Save</button>
+        <button role="menuitem">Save As</button>
+        <hr />
+        <button role="menuitem">Exit</button>
+      </menu>
+    </ot-dropdown>
+  </nav>
+  <textarea class="ghost"></textarea>
+</body>
